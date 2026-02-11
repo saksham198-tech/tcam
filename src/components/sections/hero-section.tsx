@@ -24,9 +24,9 @@ export default function HeroSection() {
         <div className="container px-4 pb-16">
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl font-headline">
             <span className="block">Unleash Your</span>
-            <span className="block text-primary-foreground/80">Musical Potential</span>
+            <span className="block text-white/90">Musical Potential</span>
           </h1>
-          <p className="mx-auto mt-6 max-w-lg text-lg text-primary-foreground/90 md:max-w-3xl">
+          <p className="mx-auto mt-6 max-w-lg text-lg text-white/90 md:max-w-3xl">
             At The Chromatica Academy of Music, we nurture your passion for music with expert guidance and a vibrant community.
           </p>
           <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
