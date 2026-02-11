@@ -35,6 +35,8 @@ export default function BookDemoPage() {
     },
   });
 
+  const uniqueInstruments = [...new Set(courses.map((course) => course.instrument))];
+
   async function onSubmit(data: DemoBookingFormValues) {
     const result = await bookDemoSession(data);
     if (result.success) {
@@ -53,7 +55,7 @@ export default function BookDemoPage() {
   }
 
   return (
-    <div className="">
+    <div className="bg-background">
       <div className="container mx-auto px-4 py-16 sm:py-24">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
@@ -114,9 +116,9 @@ export default function BookDemoPage() {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            {courses.map((course) => (
-                              <SelectItem key={course.id} value={course.instrument}>
-                                {course.instrument}
+                            {uniqueInstruments.map((instrument) => (
+                              <SelectItem key={instrument} value={instrument}>
+                                {instrument}
                               </SelectItem>
                             ))}
                           </SelectContent>
