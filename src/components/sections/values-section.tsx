@@ -26,7 +26,7 @@ const values = [
 
 export default function ValuesSection() {
   return (
-    <section className="py-16 sm:py-24 bg-secondary/50">
+    <section className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-headline">

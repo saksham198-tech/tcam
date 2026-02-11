@@ -8,7 +8,7 @@ export default function CoursesSection() {
   const featuredCourses = courses.slice(0, 3);
 
   return (
-    <section id="courses" className="py-16 sm:py-24 bg-background">
+    <section id="courses" className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-headline">

@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
+import FloatingInstruments from '@/components/layout/floating-instruments';
 
 export const metadata: Metadata = {
   title: 'TCAM - The Chromatica Academy of Music',
@@ -26,6 +27,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
       <body className={cn('font-body antialiased')}>
+        <FloatingInstruments />
         <div className="flex min-h-screen flex-col">
           <Header />
           <main className="flex-1">{children}</main>

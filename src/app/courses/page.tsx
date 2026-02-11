@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function CoursesPage() {
   return (
-    <div className="bg-background">
+    <div className="">
       <div className="container mx-auto px-4 py-16 sm:py-24">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl font-headline">

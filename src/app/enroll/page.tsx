@@ -47,7 +47,7 @@ export default function EnrollPage() {
   }
 
   return (
-    <div className="bg-background">
+    <div className="">
       <div className="container mx-auto px-4 py-16 sm:py-24">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
