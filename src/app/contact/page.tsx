@@ -95,7 +95,7 @@ export default function ContactPage() {
                 <CardTitle className="font-headline">Find Us Here</CardTitle>
               </CardHeader>
               <CardContent>
-                {mapImage &amp;&amp; (
+                {mapImage && (
                   <div className="aspect-[16/9] w-full overflow-hidden rounded-lg">
                     <Image
                       src={mapImage.imageUrl}
