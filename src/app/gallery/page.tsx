@@ -1,14 +1,23 @@
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
 
 export const metadata = {
   title: 'Gallery',
-  description: 'Explore the gallery of The Chromatica Academy of Music, showcasing our studio, events, classes, and instruments.',
+  description:
+    'Explore the gallery of The Chromatica Academy of Music, showcasing our studio, events, classes, and instruments.',
 };
 
 export default function GalleryPage() {
-  const galleryImages = PlaceHolderImages.filter(img => img.id.startsWith('gallery-'));
+  const galleryImages = PlaceHolderImages.filter((img) =>
+    img.id.startsWith('gallery-')
+  );
 
   return (
     <div className="">
@@ -18,7 +27,8 @@ export default function GalleryPage() {
             Our Gallery
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            A glimpse into the vibrant life at TCAM. See our students, faculty, and state-of-the-art facilities in action.
+            A glimpse into the vibrant life at TCAM. See our students, faculty,
+            and state-of-the-art facilities in action.
           </p>
         </div>
 
@@ -39,6 +49,12 @@ export default function GalleryPage() {
                 </div>
               </DialogTrigger>
               <DialogContent className="max-w-4xl p-0">
+                <DialogTitle className="sr-only">
+                  {image.description}
+                </DialogTitle>
+                <DialogDescription className="sr-only">
+                  {`Full screen image of ${image.description}`}
+                </DialogDescription>
                 <Image
                   src={image.imageUrl.replace('600/400', '1200/800')}
                   alt={image.description}

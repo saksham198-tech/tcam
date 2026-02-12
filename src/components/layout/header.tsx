@@ -2,8 +2,15 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Music, Mountain } from 'lucide-react';
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
+import { Menu, Mountain } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
@@ -33,7 +40,9 @@ export default function Header() {
               href={link.href}
               className={cn(
                 'transition-colors hover:text-primary',
-                pathname === link.href ? 'text-primary' : 'text-muted-foreground'
+                pathname === link.href
+                  ? 'text-primary'
+                  : 'text-muted-foreground'
               )}
             >
               {link.label}
@@ -55,8 +64,16 @@ export default function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
+                <SheetHeader className="sr-only">
+                  <SheetTitle>Menu</SheetTitle>
+                  <SheetDescription>Main navigation menu</SheetDescription>
+                </SheetHeader>
                 <div className="flex flex-col space-y-4">
-                  <Link href="/" className="mr-6 flex items-center space-x-2">
+                  <Link
+                    href="/"
+                    className="mr-6 flex items-center space-x-2"
+                    onClick={() => setSheetOpen(false)}
+                  >
                     <Mountain className="h-6 w-6 text-primary" />
                     <span className="font-bold">TCAM</span>
                   </Link>
@@ -68,7 +85,9 @@ export default function Header() {
                         onClick={() => setSheetOpen(false)}
                         className={cn(
                           'rounded-md p-2 transition-colors hover:bg-accent hover:text-accent-foreground',
-                          pathname === link.href ? 'bg-accent text-accent-foreground' : 'text-muted-foreground'
+                          pathname === link.href
+                            ? 'bg-accent text-accent-foreground'
+                            : 'text-muted-foreground'
                         )}
                       >
                         {link.label}
