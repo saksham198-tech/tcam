@@ -14,7 +14,7 @@ export default function AboutSection() {
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-primary font-headline">Our Vision</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To be a leading institution for music education, renowned for our innovative teaching methods, world-class faculty, and for inspiring a new generation of musicians who are not only skilled performers but also creative and compassionate individuals.
+                To be a leading institution for music education, renowned for our innovative teaching methods, and for inspiring a new generation of musicians who are not only skilled performers but also creative and compassionate individuals.
               </p>
             </div>
             <div className="space-y-4">

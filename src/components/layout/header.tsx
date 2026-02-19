@@ -10,10 +10,11 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
-import { Menu, Mountain } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
+import { Logo } from './logo';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -30,8 +31,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Mountain className="h-6 w-6 text-primary" />
-          <span className="font-bold font-headline">TCAM</span>
+          <Logo className="h-10 w-10 text-primary" />
+          <span className="font-bold font-headline text-xl tracking-tighter">TCAM</span>
         </Link>
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
           {navLinks.map((link) => (
@@ -64,19 +65,14 @@ export default function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
-                <SheetHeader className="sr-only">
-                  <SheetTitle>Menu</SheetTitle>
+                <SheetHeader>
+                  <SheetTitle className="flex items-center gap-2">
+                    <Logo className="h-8 w-8 text-primary" />
+                    <span>TCAM Menu</span>
+                  </SheetTitle>
                   <SheetDescription>Main navigation menu</SheetDescription>
                 </SheetHeader>
-                <div className="flex flex-col space-y-4">
-                  <Link
-                    href="/"
-                    className="mr-6 flex items-center space-x-2"
-                    onClick={() => setSheetOpen(false)}
-                  >
-                    <Mountain className="h-6 w-6 text-primary" />
-                    <span className="font-bold">TCAM</span>
-                  </Link>
+                <div className="flex flex-col space-y-4 mt-8">
                   <div className="flex flex-col space-y-2">
                     {navLinks.map((link) => (
                       <Link
