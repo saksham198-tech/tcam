@@ -148,7 +148,7 @@ export default function ContactPage() {
                     <FormItem>
                       <FormLabel>Email Address</FormLabel>
                       <FormControl>
-                        <Input placeholder="john.doe@example.com" {...field} />
+                        <Input placeholder="thechromatica@gmail.com" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
