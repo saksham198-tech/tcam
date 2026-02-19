@@ -81,38 +81,37 @@ export const courses = [
   export const testimonials = [
     {
       id: 1,
-      name: 'Sarah L.',
-      course: 'Piano Fundamentals',
-      quote: 'TCAM made learning piano so enjoyable! My instructor was patient and encouraging. I\'ve learned so much in just a few months.',
+      name: 'Ankit Srivastava',
+      course: 'Guitar & Piano',
+      quote: 'The best music academy in Lucknow. Hitendra sir is an amazing teacher. His way of teaching is very unique and easy to understand.',
       rating: 5,
     },
     {
       id: 2,
-      name: 'David C.',
-      course: 'Acoustic Guitar',
-      quote: 'The guitar course exceeded my expectations. The curriculum is well-structured, and the community is fantastic.',
+      name: 'Priya Sharma',
+      course: 'Vocal Training',
+      quote: 'Great place to learn music. The environment is very positive and the faculty is very supportive. Highly recommended for beginners!',
       rating: 5,
     },
     {
       id: 3,
-      name: 'Emily R.',
-      course: 'Violin Virtuoso',
-      quote: 'As an intermediate player, I was stuck in a rut. TCAM\'s violin program challenged me and helped me break through to the next level.',
-      rating: 4,
+      name: 'Rahul Gupta',
+      course: 'Acoustic Guitar',
+      quote: 'I started learning guitar here and I am very happy with my progress. The classes are well-structured, professional, and fun.',
+      rating: 5,
     },
     {
       id: 4,
-      name: 'Michael B.',
-      course: 'Vocal Training',
-      quote: 'I finally have the confidence to sing in front of people. The vocal coaching here is top-notch!',
+      name: 'Sneha Singh',
+      course: 'Piano Fundamentals',
+      quote: 'TCAM is the perfect place for anyone who wants to learn music professionally. The studio is well-equipped and the vibe is great.',
       rating: 5,
     },
     {
       id: 5,
-      name: 'Jessica P.',
+      name: 'Vikram Aditya',
       course: 'Drum Rhythms',
-      quote: 'So much fun! Learning drums at TCAM has been an amazing stress-reliever and a great new skill.',
+      quote: 'Excellent experience! The teachers are very knowledgeable and patient. I\'ve learned a lot in a short time. Truly the best in the city.',
       rating: 5,
     }
   ];
-  
