@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Instagram, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { Logo } from './logo';
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -40,15 +40,6 @@ export default function Footer() {
                 title="WhatsApp Inquiry"
               >
                 <WhatsAppIcon className="h-5 w-5" />
-              </Link>
-              <Link 
-                href="https://www.instagram.com/hitendra_rana0612/" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                title="Follow us on Instagram"
-              >
-                <Instagram className="h-5 w-5" />
               </Link>
             </div>
           </div>
