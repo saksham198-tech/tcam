@@ -44,9 +44,9 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-foreground">Contact Us</h3>
             <address className="mt-4 space-y-2 not-italic text-muted-foreground">
-              <p>123 Music Lane, Harmony City</p>
-              <p>Email: <a href="mailto:contact@tcam.music" className="hover:text-primary">contact@tcam.music</a></p>
-              <p>Phone: <a href="tel:+1234567890" className="hover:text-primary">(123) 456-7890</a></p>
+              <p>562/114 ramgarh colony, kanpur road, lucknow 226012</p>
+              <p>Email: <a href="mailto:thechromatica@gmail.com" className="hover:text-primary">thechromatica@gmail.com</a></p>
+              <p>Phone: <a href="tel:+918960132690" className="hover:text-primary">+91 89601 32690</a></p>
             </address>
           </div>
         </div>

@@ -11,9 +11,10 @@ import { useToast } from '@/hooks/use-toast';
 import { contactFormSchema } from '@/lib/schema';
 import { sendContactMessage } from './actions';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Link from 'next/link';
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
@@ -70,42 +71,54 @@ export default function ContactPage() {
                   <MapPin className="h-6 w-6 mr-4 mt-1 text-primary" />
                   <div>
                     <span className="font-semibold text-foreground">Address</span>
-                    <p>123 Music Lane, Harmony City, 12345</p>
+                    <p>562/114 ramgarh colony, kanpur road, lucknow 226012</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Phone className="h-6 w-6 mr-4 mt-1 text-primary" />
                   <div>
                     <span className="font-semibold text-foreground">Phone</span>
-                    <p>(123) 456-7890</p>
+                    <p>+91 89601 32690</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Mail className="h-6 w-6 mr-4 mt-1 text-primary" />
                   <div>
                     <span className="font-semibold text-foreground">Email</span>
-                    <p>contact@tcam.music</p>
+                    <p>thechromatica@gmail.com</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             <Card>
-              <CardHeader>
+              <CardHeader className="flex flex-row items-center justify-between space-y-0">
                 <CardTitle className="font-headline">Find Us Here</CardTitle>
+                <Button variant="ghost" size="sm" asChild className="gap-2">
+                  <Link href="https://maps.app.goo.gl/x2cQu7QG6sAb4iPt9" target="_blank" rel="noopener noreferrer">
+                    Open in Maps <ExternalLink className="h-4 w-4" />
+                  </Link>
+                </Button>
               </CardHeader>
               <CardContent>
                 {mapImage && (
-                  <div className="aspect-[16/9] w-full overflow-hidden rounded-lg">
-                    <Image
-                      src={mapImage.imageUrl}
-                      alt={mapImage.description}
-                      width={1200}
-                      height={400}
-                      className="w-full h-full object-cover"
-                      data-ai-hint={mapImage.imageHint}
-                    />
-                  </div>
+                  <Link href="https://maps.app.goo.gl/x2cQu7QG6sAb4iPt9" target="_blank" rel="noopener noreferrer" className="block group relative">
+                    <div className="aspect-[16/9] w-full overflow-hidden rounded-lg">
+                      <Image
+                        src={mapImage.imageUrl}
+                        alt={mapImage.description}
+                        width={1200}
+                        height={400}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        data-ai-hint={mapImage.imageHint}
+                      />
+                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                         <span className="bg-primary text-primary-foreground px-4 py-2 rounded-md font-medium shadow-lg flex items-center gap-2">
+                           View on Google Maps <ExternalLink className="h-4 w-4" />
+                         </span>
+                      </div>
+                    </div>
+                  </Link>
                 )}
               </CardContent>
             </Card>
