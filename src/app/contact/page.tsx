@@ -9,17 +9,23 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { contactFormSchema } from '@/lib/schema';
-import { sendContactMessage } from './actions';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Link from 'next/link';
 
+// Firebase imports
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { useFirestore } from '@/firebase';
+import { errorEmitter } from '@/firebase/error-emitter';
+import { FirestorePermissionError, type SecurityRuleContext } from '@/firebase/errors';
+
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function ContactPage() {
   const { toast } = useToast();
+  const db = useFirestore();
   const mapImage = PlaceHolderImages.find(img => img.id === 'contact-map');
 
   const form = useForm<ContactFormValues>({
@@ -32,20 +38,40 @@ export default function ContactPage() {
   });
 
   async function onSubmit(data: ContactFormValues) {
-    const result = await sendContactMessage(data);
-    if (result.success) {
-      toast({
-        title: 'Message Sent!',
-        description: "Thank you for contacting us. We'll get back to you shortly.",
-      });
-      form.reset();
-    } else {
+    if (!db) {
       toast({
         variant: 'destructive',
-        title: 'Uh oh! Something went wrong.',
-        description: result.message,
+        title: 'Error',
+        description: 'Database not initialized.',
       });
+      return;
     }
+
+    const docData = {
+      ...data,
+      recipientEmail: 'thechromatica@gmail.com',
+      createdAt: serverTimestamp(),
+    };
+
+    const collectionRef = collection(db, 'contactMessages');
+
+    // Initiate the write to Firestore (mutation)
+    addDoc(collectionRef, docData)
+      .catch(async (error) => {
+        const permissionError = new FirestorePermissionError({
+          path: collectionRef.path,
+          operation: 'create',
+          requestResourceData: docData,
+        } satisfies SecurityRuleContext);
+        errorEmitter.emit('permission-error', permissionError);
+      });
+
+    // Optimistically show success to the user
+    toast({
+      title: 'Message Sent!',
+      description: "Thank you for contacting us. Your message has been sent to thechromatica@gmail.com.",
+    });
+    form.reset();
   }
 
   return (

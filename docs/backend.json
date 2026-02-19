@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "ContactMessage": {
+      "title": "Contact Message",
+      "description": "A message submitted via the contact form.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Sender's full name"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Sender's email address"
+        },
+        "message": {
+          "type": "string",
+          "description": "The message content"
+        },
+        "recipientEmail": {
+          "type": "string",
+          "description": "The target recipient of this message"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the message was sent"
+        }
+      },
+      "required": ["name", "email", "message", "recipientEmail", "createdAt"]
+    }
+  },
+  "auth": {
+    "providers": ["google.com"]
+  },
+  "firestore": {
+    "contactMessages/{messageId}": {
+      "schema": "ContactMessage",
+      "description": "Messages received from the website contact form."
+    }
+  }
+}
