@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Github, Twitter, Instagram } from 'lucide-react';
-import { Logo } from './logo';
 
 export default function Footer() {
   return (
@@ -9,7 +8,6 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              <Logo className="h-10 w-10 text-primary" />
               <span className="text-xl font-bold font-headline tracking-tighter">TCAM</span>
             </Link>
             <p className="text-muted-foreground">Nurturing the next generation of musical talent.</p>

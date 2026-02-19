@@ -14,7 +14,6 @@ import { Menu } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
-import { Logo } from './logo';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -31,7 +30,6 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Logo className="h-10 w-10 text-primary" />
           <span className="font-bold font-headline text-xl tracking-tighter">TCAM</span>
         </Link>
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
@@ -67,7 +65,6 @@ export default function Header() {
               <SheetContent side="right">
                 <SheetHeader>
                   <SheetTitle className="flex items-center gap-2">
-                    <Logo className="h-8 w-8 text-primary" />
                     <span>TCAM Menu</span>
                   </SheetTitle>
                   <SheetDescription>Main navigation menu</SheetDescription>
