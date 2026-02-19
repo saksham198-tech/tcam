@@ -41,7 +41,13 @@ export default function Footer() {
               >
                 <WhatsAppIcon className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link 
+                href="https://www.instagram.com/hitendra_rana0612/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                title="Follow us on Instagram"
+              >
                 <Instagram className="h-5 w-5" />
               </Link>
             </div>
