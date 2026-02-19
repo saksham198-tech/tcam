@@ -81,9 +81,9 @@ export const courses = [
   export const testimonials = [
     {
       id: 1,
-      name: 'Ankit Srivastava',
-      course: 'Guitar & Piano',
-      quote: 'The best music academy in Lucknow. Hitendra sir is an amazing teacher. His way of teaching is very unique and easy to understand.',
+      name: 'Charak srivastava',
+      course: 'Music Student',
+      quote: 'This academy of music has given me a lots of knowledge about music. The music teachers are very good at assessing student\'s abilities and interests and adjusting their lessons accordingly.They are gifted musicians but also highly skilled at teaching.They are fair but firm with students and I highly recommend everyone to join the TCAM(The Chromatica Academy of Music).',
       rating: 5,
     },
     {
