@@ -69,10 +69,9 @@ export default function ContactPage() {
 
     // 2. Send via EmailJS
     try {
-      // Use the credentials provided by the user
       const result = await emailjs.send(
         'service_757bimb', // Service ID
-        'service_757bimb', // Template ID (Note: Template ID usually starts with 'template_')
+        'template_mf6f3z5', // Correct Template ID
         {
           from_name: data.name,
           from_email: data.email,
@@ -92,7 +91,6 @@ export default function ContactPage() {
         throw new Error(`EmailJS returned status ${result.status}: ${result.text}`);
       }
     } catch (error: any) {
-      // Log more descriptive error information
       const errorMsg = error?.text || error?.message || (typeof error === 'string' ? error : 'Unknown error');
       console.error('EmailJS Error Details:', errorMsg);
       
@@ -101,7 +99,6 @@ export default function ContactPage() {
         title: 'Email Notification Failed',
         description: 'Your message was saved to our database, but the email notification failed. We will still review your inquiry!',
       });
-      // We still reset the form because the Firestore write was initiated (optimistically)
       form.reset();
     }
   }
