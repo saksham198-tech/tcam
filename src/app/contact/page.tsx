@@ -71,8 +71,10 @@ export default function ContactPage() {
     try {
       const result = await emailjs.send(
         'service_757bimb', // Service ID
-        'template_mf6f3z5', // Correct Template ID
+        'template_mf6f3z5', // Template ID
         {
+          name: data.name,      // Added common key
+          email: data.email,    // Added common key
           from_name: data.name,
           from_email: data.email,
           message: data.message,
