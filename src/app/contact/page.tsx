@@ -56,7 +56,7 @@ export default function ContactPage() {
 
     const collectionRef = collection(db, 'contactMessages');
 
-    // 1. Save to Firestore (Mutation)
+    // 1. Save to Firestore (Mutation - Non-blocking)
     addDoc(collectionRef, docData)
       .catch(async (error) => {
         const permissionError = new FirestorePermissionError({
@@ -69,9 +69,10 @@ export default function ContactPage() {
 
     // 2. Send via EmailJS
     try {
-      await emailjs.send(
+      // Use the credentials provided by the user
+      const result = await emailjs.send(
         'service_757bimb', // Service ID
-        'service_757bimb', // Template ID (As provided)
+        'service_757bimb', // Template ID (Note: Template ID usually starts with 'template_')
         {
           from_name: data.name,
           from_email: data.email,
@@ -81,18 +82,26 @@ export default function ContactPage() {
         '8qvpeVNd3ZNTqn3Kl' // Public Key
       );
 
-      toast({
-        title: 'Message Sent!',
-        description: "Thank you for contacting us. Your message has been sent and saved.",
-      });
-      form.reset();
-    } catch (error) {
-      console.error('EmailJS Error:', error);
+      if (result.status === 200) {
+        toast({
+          title: 'Message Sent!',
+          description: "Thank you for contacting us. Your message has been sent and saved.",
+        });
+        form.reset();
+      } else {
+        throw new Error(`EmailJS returned status ${result.status}: ${result.text}`);
+      }
+    } catch (error: any) {
+      // Log more descriptive error information
+      const errorMsg = error?.text || error?.message || (typeof error === 'string' ? error : 'Unknown error');
+      console.error('EmailJS Error Details:', errorMsg);
+      
       toast({
         variant: 'destructive',
         title: 'Email Notification Failed',
         description: 'Your message was saved to our database, but the email notification failed. We will still review your inquiry!',
       });
+      // We still reset the form because the Firestore write was initiated (optimistically)
       form.reset();
     }
   }
