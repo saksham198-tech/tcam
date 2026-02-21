@@ -19,9 +19,8 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-4">
-            <Link href="/" className="flex items-center space-x-2">
-              <Logo />
-              <span className="text-xl font-bold font-headline tracking-tighter">TCAM</span>
+            <Link href="/" className="flex items-center">
+              <Logo className="h-10 w-28 -ml-4" />
             </Link>
             <p className="text-muted-foreground">Nurturing the next generation of musical talent.</p>
             <div className="flex space-x-4">

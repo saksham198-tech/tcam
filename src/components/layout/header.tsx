@@ -30,9 +30,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2">
+        <Link href="/" className="mr-6 flex items-center">
           <Logo />
-          <span className="font-bold font-headline text-xl tracking-tighter">TCAM</span>
         </Link>
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
           {navLinks.map((link) => (
@@ -67,8 +66,7 @@ export default function Header() {
               <SheetContent side="right">
                 <SheetHeader>
                   <SheetTitle className="flex items-center gap-2">
-                    <Logo className="h-8 w-8" />
-                    <span>TCAM Menu</span>
+                    <Logo className="h-10 w-24" />
                   </SheetTitle>
                   <SheetDescription>Main navigation menu</SheetDescription>
                 </SheetHeader>
