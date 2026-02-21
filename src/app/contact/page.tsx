@@ -14,6 +14,7 @@ import { Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Link from 'next/link';
+import emailjs from '@emailjs/browser';
 
 // Firebase imports
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
@@ -55,7 +56,7 @@ export default function ContactPage() {
 
     const collectionRef = collection(db, 'contactMessages');
 
-    // Initiate the write to Firestore (mutation)
+    // 1. Save to Firestore (Mutation)
     addDoc(collectionRef, docData)
       .catch(async (error) => {
         const permissionError = new FirestorePermissionError({
@@ -66,12 +67,34 @@ export default function ContactPage() {
         errorEmitter.emit('permission-error', permissionError);
       });
 
-    // Optimistically show success to the user
-    toast({
-      title: 'Message Sent!',
-      description: "Thank you for contacting us. Your message has been sent to thechromatica@gmail.com.",
-    });
-    form.reset();
+    // 2. Send via EmailJS
+    try {
+      await emailjs.send(
+        'service_757bimb', // Service ID
+        'service_757bimb', // Template ID (As provided)
+        {
+          from_name: data.name,
+          from_email: data.email,
+          message: data.message,
+          to_email: 'thechromatica@gmail.com',
+        },
+        '8qvpeVNd3ZNTqn3Kl' // Public Key
+      );
+
+      toast({
+        title: 'Message Sent!',
+        description: "Thank you for contacting us. Your message has been sent and saved.",
+      });
+      form.reset();
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      toast({
+        variant: 'destructive',
+        title: 'Email Notification Failed',
+        description: 'Your message was saved to our database, but the email notification failed. We will still review your inquiry!',
+      });
+      form.reset();
+    }
   }
 
   return (
