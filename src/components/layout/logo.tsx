@@ -10,11 +10,11 @@ export function Logo({ className }: { className?: string }) {
         className="h-full w-full transition-transform duration-300 hover:scale-105"
       >
         {/* Subtle background highlight for the text area */}
-        <rect x="28" y="8" width="64" height="24" rx="4" className="fill-primary/5" />
+        <rect x="0" y="8" width="120" height="24" rx="4" className="fill-primary/5" />
         
-        {/* Top Bold Line - Trimmed to text width */}
+        {/* Top Bold Line - Full width */}
         <path
-          d="M32 8H88"
+          d="M0 8H120"
           stroke="currentColor"
           strokeWidth="3"
           strokeLinecap="round"
@@ -36,18 +36,18 @@ export function Logo({ className }: { className?: string }) {
           TCAM
         </text>
         
-        {/* Bottom Bold Line - Trimmed to text width */}
+        {/* Bottom Bold Line - Full width */}
         <path
-          d="M32 32H88"
+          d="M0 32H120"
           stroke="currentColor"
           strokeWidth="3"
           strokeLinecap="round"
           className="text-primary"
         />
         
-        {/* Small accents closer to the trimmed logo */}
-        <circle cx="28" cy="20" r="1.5" className="fill-accent" />
-        <circle cx="92" cy="20" r="1.5" className="fill-accent" />
+        {/* Small accents */}
+        <circle cx="10" cy="20" r="2" className="fill-accent" />
+        <circle cx="110" cy="20" r="2" className="fill-accent" />
       </svg>
     </div>
   );
