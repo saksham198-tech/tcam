@@ -10,13 +10,13 @@ export function Logo({ className }: { className?: string }) {
         className="h-full w-full transition-transform duration-300 hover:scale-105"
       >
         {/* Subtle background highlight for the text area */}
-        <rect x="5" y="8" width="110" height="24" rx="4" className="fill-primary/5" />
+        <rect x="28" y="8" width="64" height="24" rx="4" className="fill-primary/5" />
         
-        {/* Top Bold Line */}
+        {/* Top Bold Line - Trimmed to text width */}
         <path
-          d="M5 8H115"
+          d="M32 8H88"
           stroke="currentColor"
-          strokeWidth="4"
+          strokeWidth="3"
           strokeLinecap="round"
           className="text-primary"
         />
@@ -24,29 +24,30 @@ export function Logo({ className }: { className?: string }) {
         {/* TCAM Text */}
         <text
           x="60"
-          y="26"
+          y="25"
           textAnchor="middle"
+          dominantBaseline="middle"
           className="fill-primary font-bold text-xl"
           style={{ 
             fontFamily: 'Inter, sans-serif',
-            letterSpacing: '0.1em'
+            letterSpacing: '0.05em'
           }}
         >
           TCAM
         </text>
         
-        {/* Bottom Bold Line */}
+        {/* Bottom Bold Line - Trimmed to text width */}
         <path
-          d="M5 32H115"
+          d="M32 32H88"
           stroke="currentColor"
-          strokeWidth="4"
+          strokeWidth="3"
           strokeLinecap="round"
           className="text-primary"
         />
         
-        {/* Decorative Musical Accent */}
-        <circle cx="110" cy="20" r="2" className="fill-accent" />
-        <circle cx="10" cy="20" r="2" className="fill-accent" />
+        {/* Small accents closer to the trimmed logo */}
+        <circle cx="28" cy="20" r="1.5" className="fill-accent" />
+        <circle cx="92" cy="20" r="1.5" className="fill-accent" />
       </svg>
     </div>
   );
