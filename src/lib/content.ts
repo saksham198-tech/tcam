@@ -82,10 +82,10 @@ export const testimonials = [
   },
   {
     id: 2,
-    name: 'Anjali Verma',
+    name: 'Shivesh Pratap Singh',
     course: 'Vocal Training',
-    quote: "TCAM is the best place in Lucknow to learn music. The teachers are extremely patient and professional. I've seen a huge improvement in my singing since I joined.",
-    rating: 5,
+    quote: "Vocal coach “Rohan sir” is teacher cum buddy! We laugh learn and apply the learnings in Mic setup day. Best part is you can sing 2 songs after 10 days of practice which is very essential in your singing journey. I recommend this vocal classes. You can 1st take free trial class. I am sure you will learn a lot about basics. All the best singers 🎤 🎙️",
+    rating: 4,
   },
   {
     id: 3,
