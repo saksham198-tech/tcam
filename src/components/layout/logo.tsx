@@ -10,16 +10,17 @@ export function Logo({ className }: { className?: string }) {
         className="h-full w-full transition-transform duration-300 hover:scale-105"
       >
         {/* Subtle background highlight for the text area - trimmed to text width */}
-        <rect x="5" y="5" width="70" height="30" rx="4" className="fill-primary/5" />
+        <rect x="5" y="2" width="70" height="36" rx="4" className="fill-primary/5" />
         
-        {/* Top Bold Line - Trimmed to text width */}
+        {/* Top Bold Line - Trimmed to text width, moved higher to increase gap */}
         <path
-          d="M5 5H75"
+          d="M5 2H75"
           stroke="currentColor"
           strokeWidth="3"
           strokeLinecap="round"
           className="text-primary"
         />
+    
         
         {/* TCAM Text - Centered at 20 for perfect vertical symmetry */}
         <text
@@ -36,9 +37,9 @@ export function Logo({ className }: { className?: string }) {
           TCAM
         </text>
         
-        {/* Bottom Bold Line - Trimmed to text width */}
+        {/* Bottom Bold Line - Trimmed to text width, moved lower to increase gap */}
         <path
-          d="M5 35H75"
+          d="M5 38H75"
           stroke="currentColor"
           strokeWidth="3"
           strokeLinecap="round"
