@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { courses } from '@/lib/content';
-import { ArrowRight, Clock, DollarSign, BarChart } from 'lucide-react';
+import { ArrowRight, Clock, BarChart } from 'lucide-react';
 
 export const metadata = {
   title: 'Instruments & Courses',
@@ -39,10 +39,6 @@ export default function CoursesPage() {
                   <div className="flex items-center">
                     <Clock className="mr-2 h-4 w-4 text-primary" />
                     <span>Duration: {course.duration}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <DollarSign className="mr-2 h-4 w-4 text-primary" />
-                    <span>Fee: ${course.fee}</span>
                   </div>
                 </div>
               </CardContent>
