@@ -21,10 +21,10 @@ export function Logo({ className }: { className?: string }) {
           className="text-primary"
         />
         
-        {/* TCAM Text */}
+        {/* TCAM Text - Centered at 20 for symmetry between lines at 8 and 32 */}
         <text
           x="40"
-          y="25"
+          y="20"
           textAnchor="middle"
           dominantBaseline="middle"
           className="fill-primary font-bold text-xl"
