@@ -1,3 +1,4 @@
+
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -50,10 +51,14 @@ export default function EnrollPage() {
         'template_56q2mds', // Enrollment Template ID
         {
           fullName: data.fullName,
+          name: data.fullName,           // Alias for common template patterns
+          from_name: data.fullName,      // Alias for common template patterns
           email: data.email,
           phone: data.phone,
           course: data.course,
           batchTime: data.batchTime,
+          batch_time: data.batchTime,     // Alias for common template patterns
+          preferred_batch: data.batchTime, // Alias for common template patterns
           to_email: 'thechromatica@gmail.com',
         },
         '8qvpeVNd3ZNTqn3Kl' // Public Key
