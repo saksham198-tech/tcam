@@ -12,6 +12,7 @@ import { registrationFormSchema } from '@/lib/schema';
 import { registerStudent } from './actions';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { courses } from '@/lib/content';
+import emailjs from '@emailjs/browser';
 
 type RegistrationFormValues = z.infer<typeof registrationFormSchema>;
 
@@ -30,19 +31,52 @@ export default function EnrollPage() {
   });
 
   async function onSubmit(data: RegistrationFormValues) {
+    // 1. Simulate server-side registration (logging/DB)
     const result = await registerStudent(data);
-    if (result.success) {
-      toast({
-        title: 'Registration Successful!',
-        description: "Welcome to TCAM! We've received your details and will contact you shortly with the next steps.",
-      });
-      form.reset();
-    } else {
+    
+    if (!result.success) {
       toast({
         variant: 'destructive',
         title: 'Uh oh! Something went wrong.',
         description: result.message,
       });
+      return;
+    }
+
+    // 2. Send email notification via EmailJS
+    try {
+      const emailResult = await emailjs.send(
+        'service_757bimb', // Service ID
+        'template_56q2mds', // Enrollment Template ID
+        {
+          fullName: data.fullName,
+          email: data.email,
+          phone: data.phone,
+          course: data.course,
+          batchTime: data.batchTime,
+          to_email: 'thechromatica@gmail.com',
+        },
+        '8qvpeVNd3ZNTqn3Kl' // Public Key
+      );
+
+      if (emailResult.status === 200) {
+        toast({
+          title: 'Registration Successful!',
+          description: "Welcome to TCAM! We've received your details and an email notification has been sent.",
+        });
+        form.reset();
+      } else {
+        throw new Error('Email delivery failed');
+      }
+    } catch (error: any) {
+      console.error('EmailJS Error:', error);
+      toast({
+        variant: 'destructive',
+        title: 'Email Notification Delayed',
+        description: 'Your registration was recorded, but we had trouble sending the confirmation email. We will contact you soon!',
+      });
+      // We still reset because the "server" part (registerStudent) succeeded
+      form.reset();
     }
   }
 
@@ -102,7 +136,7 @@ export default function EnrollPage() {
                       <FormItem>
                         <FormLabel>Phone Number</FormLabel>
                         <FormControl>
-                          <Input placeholder="(123) 456-7890" {...field} />
+                          <Input placeholder="Enter your mobile number" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>

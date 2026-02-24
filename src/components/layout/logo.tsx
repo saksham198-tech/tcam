@@ -25,7 +25,7 @@ export function Logo({ className }: { className?: string }) {
         {/* TCAM Text - Centered at 20 for perfect vertical symmetry */}
         <text
           x="40"
-          y="20"
+          y="22"
           textAnchor="middle"
           dominantBaseline="middle"
           className="fill-primary font-bold text-xl"
