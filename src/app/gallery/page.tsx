@@ -1,3 +1,4 @@
+
 'use client';
 
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -42,11 +43,12 @@ export default function GalleryPage() {
         {galleryMedia.length > 0 ? (
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-rows-[300px]">
             {galleryMedia.map((item, idx) => {
-              // Bento grid logic: every 7th item is large, but don't do it for the very last item to maintain alignment
-              const isLarge = idx % 7 === 0 && idx !== galleryMedia.length - 1;
+              // Bento grid logic: every 7th item is large, but ensure it's not one of the last few items
+              // to prevent alignment issues at the end of the grid.
+              const isLarge = idx % 7 === 0 && idx < galleryMedia.length - 3;
               
               return (
-                <Dialog key={item.id}>
+                <Dialog key={`${item.id}-${idx}`}>
                   <DialogTrigger asChild>
                     <div className={cn(
                       "group relative cursor-pointer overflow-hidden rounded-3xl shadow-lg transition-all duration-500 hover:shadow-2xl hover:shadow-primary/30 bg-muted",
