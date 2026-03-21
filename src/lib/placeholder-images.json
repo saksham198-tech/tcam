@@ -41,6 +41,160 @@
       "imageUrl": "https://images.unsplash.com/photo-1730317195705-8a265a59ed1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjaXR5JTIwbWFwfGVufDB8fHx8MTc3MDgxNDA5NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "city map",
       "mediaType": "image"
+    },
+    {
+      "id": "gallery-v1",
+      "description": "Academy Atmosphere & Performance",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/video/upload/v1774078713/WhatsApp_Video_2026-03-20_at_9.49.44_PM_lvcxw5.mp4",
+      "imageHint": "music performance",
+      "mediaType": "video"
+    },
+    {
+      "id": "gallery-i1",
+      "description": "Inspirational Learning Sessions",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078248/WhatsApp_Image_2026-03-15_at_2.11.23_PM_nwr0cy.jpg",
+      "imageHint": "music lesson",
+      "mediaType": "image"
+    },
+    {
+      "id": "gallery-i2",
+      "description": "Student Spotlight",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078248/WhatsApp_Image_2026-03-15_at_2.11.24_PM_1_sd9f4w.jpg",
+      "imageHint": "student playing",
+      "mediaType": "image"
+    },
+    {
+      "id": "gallery-v2",
+      "description": "Technical Mastery in Motion",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/video/upload/v1774078489/WhatsApp_Video_2026-03-20_at_9.49.39_PM_jr9xvz.mp4",
+      "imageHint": "instrument play",
+      "mediaType": "video"
+    },
+    {
+      "id": "gallery-i3",
+      "description": "A Passion for Excellence",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078254/WhatsApp_Image_2026-03-15_at_2.11.24_PM_vailtl.jpg",
+      "imageHint": "music passion",
+      "mediaType": "image"
+    },
+    {
+      "id": "gallery-i4",
+      "description": "Vibrant Campus Life",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078259/WhatsApp_Image_2026-03-20_at_9.49.19_PM_2_ddch6w.jpg",
+      "imageHint": "academy campus",
+      "mediaType": "image"
+    },
+    {
+      "id": "gallery-v3",
+      "description": "Stage Presence Training",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/video/upload/v1774078471/WhatsApp_Video_2026-03-20_at_9.49.46_PM_eszid8.mp4",
+      "imageHint": "live stage",
+      "mediaType": "video"
+    },
+    {
+      "id": "gallery-i5",
+      "description": "Collaborative Harmony",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078248/WhatsApp_Image_2026-03-15_at_2.11.24_PM_2_lvkhus.jpg",
+      "imageHint": "music collab",
+      "mediaType": "image"
+    },
+    {
+      "id": "gallery-i6",
+      "description": "The Art of Music",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078250/WhatsApp_Image_2026-03-20_at_9.49.19_qgsafc.jpg",
+      "imageHint": "art music",
+      "mediaType": "image"
+    },
+    {
+      "id": "gallery-v4",
+      "description": "Rhythmic Expression",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/video/upload/v1774078808/WhatsApp_Video_2026-03-20_at_9.49.38_PM_lk4ymq.mp4",
+      "imageHint": "rhythm music",
+      "mediaType": "video"
+    },
+    {
+      "id": "gallery-i7",
+      "description": "Advanced Training Modules",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078250/WhatsApp_Image_2026-03-20_at_9.49.21_PM_gomav1.jpg",
+      "imageHint": "advanced music",
+      "mediaType": "image"
+    },
+    {
+      "id": "gallery-i8",
+      "description": "Mentorship and Growth",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078254/WhatsApp_Image1_2026-03-20_at_9.51.05_PM_tgmjwf.jpg",
+      "imageHint": "music mentor",
+      "mediaType": "image"
+    },
+    {
+      "id": "gallery-v5",
+      "description": "Creative Flow",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/video/upload/v1774078548/WhatsApp_Video_2026-03-20_at_9.49.29_PM_fg8wb4.mp4",
+      "imageHint": "creative flow",
+      "mediaType": "video"
+    },
+    {
+      "id": "gallery-i10",
+      "description": "The Joy of Learning",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078248/WhatsApp_Image_2026-03-15_at_2.11.23_PM_2_iywn4z.jpg",
+      "imageHint": "happy learner",
+      "mediaType": "image"
+    },
+    {
+      "id": "gallery-i11",
+      "description": "Precision and Focus",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078252/WhatsApp_Image_2026-03-20_at_9.49.19_PM_1_hskkar.jpg",
+      "imageHint": "music focus",
+      "mediaType": "image"
+    },
+    {
+      "id": "gallery-v6",
+      "description": "Academy Highlight Reel",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/video/upload/v1774078721/WhatsApp_Video_2026-03-20_at_9.49.27_PM_p5y3o4.mp4",
+      "imageHint": "academy highlight",
+      "mediaType": "video"
+    },
+    {
+      "id": "gallery-i12",
+      "description": "A World of Instruments",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078253/WhatsApp_Image_2026-03-20_at_9.51.05_PM_xdaqqx.jpg",
+      "imageHint": "instruments collection",
+      "mediaType": "image"
+    },
+    {
+      "id": "gallery-i13",
+      "description": "Studio Experience",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078250/WhatsApp_Image_2026-03-15_at_2.11.24_PM_3_xgueag.jpg",
+      "imageHint": "recording studio",
+      "mediaType": "image"
+    },
+    {
+      "id": "gallery-i14",
+      "description": "Nurturing Talent",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078249/WhatsApp_Image_2026-03-20_at_9.49.21_PM_5_znoyo2.jpg",
+      "imageHint": "talent nurture",
+      "mediaType": "image"
+    },
+    {
+      "id": "gallery-i15",
+      "description": "Melodic Journeys",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078246/WhatsApp_Image_2026-03-20_at_9.49.21_PM_2_gmfp49.jpg",
+      "imageHint": "melodic journey",
+      "mediaType": "image"
+    },
+    {
+      "id": "gallery-i16",
+      "description": "Performance Milestones",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078249/WhatsApp_Image_2026-03-20_at_9.49.21_PM_4_utrbcx.jpg",
+      "imageHint": "performance milestone",
+      "mediaType": "image"
+    },
+    {
+      "id": "gallery-i17",
+      "description": "Our Musical Community",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078247/WhatsApp_Image_2026-03-20_at_9.49.21_PM_3_scmx6o.jpg",
+      "imageHint": "music community",
+      "mediaType": "image"
     }
   ]
 }
