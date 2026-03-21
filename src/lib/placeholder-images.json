@@ -4,37 +4,127 @@
       "id": "hero-image",
       "description": "A vibrant, abstract representation of sound waves and musical notes.",
       "imageUrl": "https://images.unsplash.com/photo-1584679109391-04da6972a915?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHx8fHxtdXNpYyUyMGFic3RyYWN0fGVufDB8fHx8MTc3MDgzNjU4NXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "music abstract"
+      "imageHint": "music abstract",
+      "mediaType": "image"
     },
     {
       "id": "faculty-1",
       "description": "Portrait of a music teacher.",
       "imageUrl": "https://images.unsplash.com/photo-1693050407016-102752c10a32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0ZWFjaGVyJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcwNzQyNDcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "teacher portrait"
+      "imageHint": "teacher portrait",
+      "mediaType": "image"
     },
     {
       "id": "faculty-2",
       "description": "Portrait of a music teacher.",
       "imageUrl": "https://images.unsplash.com/photo-1547308283-8eab4ad45496?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtdXNpY2lhbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc3MDc5NDE2MXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "musician portrait"
+      "imageHint": "musician portrait",
+      "mediaType": "image"
     },
     {
       "id": "faculty-3",
       "description": "Portrait of a music teacher.",
       "imageUrl": "https://images.unsplash.com/photo-1529943684416-9d29047b809e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhcnRpc3QlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzA3NDgyODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "artist portrait"
+      "imageHint": "artist portrait",
+      "mediaType": "image"
     },
     {
       "id": "faculty-4",
       "description": "Portrait of a music teacher.",
       "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzA4MTA2ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "person portrait"
+      "imageHint": "person portrait",
+      "mediaType": "image"
     },
     {
       "id": "contact-map",
       "description": "Placeholder map for TCAM's location.",
       "imageUrl": "https://images.unsplash.com/photo-1730317195705-8a265a59ed1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjaXR5JTIwbWFwfGVufDB8fHx8MTc3MDgxNDA5NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "city map"
+      "imageHint": "city map",
+      "mediaType": "image"
+    },
+    {
+      "id": "gallery-photo-1",
+      "description": "Academy Gallery Photo 1",
+      "imageUrl": "/assets/photo1.jpg",
+      "mediaType": "image",
+      "imageHint": "music"
+    },
+    {
+      "id": "gallery-photo-2",
+      "description": "Academy Gallery Photo 2",
+      "imageUrl": "/assets/photo2.jpg",
+      "mediaType": "image",
+      "imageHint": "music"
+    },
+    {
+      "id": "gallery-photo-3",
+      "description": "Academy Gallery Photo 3",
+      "imageUrl": "/assets/photo3.jpg",
+      "mediaType": "image",
+      "imageHint": "music"
+    },
+    {
+      "id": "gallery-photo-4",
+      "description": "Academy Gallery Photo 4",
+      "imageUrl": "/assets/photo4.jpg",
+      "mediaType": "image",
+      "imageHint": "music"
+    },
+    {
+      "id": "gallery-photo-5",
+      "description": "Academy Gallery Photo 5",
+      "imageUrl": "/assets/photo5.jpg",
+      "mediaType": "image",
+      "imageHint": "music"
+    },
+    {
+      "id": "gallery-photo-6",
+      "description": "Academy Gallery Photo 6",
+      "imageUrl": "/assets/photo6.jpg",
+      "mediaType": "image",
+      "imageHint": "music"
+    },
+    {
+      "id": "gallery-photo-7",
+      "description": "Academy Gallery Photo 7",
+      "imageUrl": "/assets/photo7.jpg",
+      "mediaType": "image",
+      "imageHint": "music"
+    },
+    {
+      "id": "gallery-photo-8",
+      "description": "Academy Gallery Photo 8",
+      "imageUrl": "/assets/photo8.jpg",
+      "mediaType": "image",
+      "imageHint": "music"
+    },
+    {
+      "id": "gallery-video-1",
+      "description": "Academy Performance Video 1",
+      "imageUrl": "/assets/video1.mp4",
+      "mediaType": "video",
+      "imageHint": "performance"
+    },
+    {
+      "id": "gallery-video-2",
+      "description": "Academy Performance Video 2",
+      "imageUrl": "/assets/video2.mp4",
+      "mediaType": "video",
+      "imageHint": "performance"
+    },
+    {
+      "id": "gallery-video-3",
+      "description": "Academy Performance Video 3",
+      "imageUrl": "/assets/video3.mp4",
+      "mediaType": "video",
+      "imageHint": "performance"
+    },
+    {
+      "id": "gallery-video-4",
+      "description": "Academy Performance Video 4",
+      "imageUrl": "/assets/video4.mp4",
+      "mediaType": "video",
+      "imageHint": "performance"
     }
   ]
 }
