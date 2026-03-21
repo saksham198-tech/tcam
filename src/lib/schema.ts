@@ -33,9 +33,11 @@ export const registrationFormSchema = z.object({
 export const demoBookingFormSchema = z.object({
     name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
     email: z.string().email({ message: 'Please enter a valid email address.' }),
+    phone: z.string().min(10, {
+      message: 'Please enter a valid phone number.',
+    }),
     instrument: z.string({ required_error: 'Please select an instrument.' }),
     preferredDate: z.date({
       required_error: 'A date is required.',
     }),
-    preferredTime: z.string({ required_error: 'Please select a time slot.' }),
 });
