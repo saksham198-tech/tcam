@@ -54,7 +54,7 @@ export default function BookDemoPage() {
   }
 
   return (
-    <div className="bg-background">
+    <div className="bg-background min-h-screen">
       <div className="container mx-auto px-4 py-16 sm:py-24">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
@@ -66,30 +66,30 @@ export default function BookDemoPage() {
             </p>
           </div>
 
-          <Card>
+          <Card className="shadow-xl border-primary/10">
             <CardHeader>
               <CardTitle className="font-headline text-2xl">Demo Session Scheduler</CardTitle>
               <CardDescription>
-                Select your preferred instrument, phone number, and date. It's that simple!
+                Provide your details and select a date that works best for you.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Full Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Jane Doe" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
                   <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Full Name</FormLabel>
+                          <FormControl>
+                            <Input placeholder="John Doe" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
                     <FormField
                       control={form.control}
                       name="email"
@@ -97,12 +97,15 @@ export default function BookDemoPage() {
                         <FormItem>
                           <FormLabel>Email Address</FormLabel>
                           <FormControl>
-                            <Input placeholder="jane.doe@example.com" {...field} />
+                            <Input placeholder="john@example.com" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
+                  </div>
+                  
+                  <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                     <FormField
                       control={form.control}
                       name="phone"
@@ -116,31 +119,32 @@ export default function BookDemoPage() {
                         </FormItem>
                       )}
                     />
+                    <FormField
+                      control={form.control}
+                      name="instrument"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Instrument of Interest</FormLabel>
+                          <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <FormControl>
+                              <SelectTrigger>
+                                <SelectValue placeholder="Select instrument" />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              {uniqueInstruments.map((instrument) => (
+                                <SelectItem key={instrument} value={instrument}>
+                                  {instrument}
+                                </SelectItem>
+                              ))}
+                            </SelectContent>
+                          </Select>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
                   </div>
-                  <FormField
-                    control={form.control}
-                    name="instrument"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Instrument of Interest</FormLabel>
-                        <Select onValueChange={field.onChange} defaultValue={field.value}>
-                          <FormControl>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Select an instrument" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            {uniqueInstruments.map((instrument) => (
-                              <SelectItem key={instrument} value={instrument}>
-                                {instrument}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+
                   <FormField
                     control={form.control}
                     name="preferredDate"
@@ -162,13 +166,14 @@ export default function BookDemoPage() {
                               </Button>
                             </FormControl>
                           </PopoverTrigger>
-                          <PopoverContent className="w-auto p-0" align="start">
+                          <PopoverContent className="w-auto p-0" align="center" side="bottom">
                             <Calendar
                               mode="single"
                               selected={field.value}
                               onSelect={field.onChange}
                               disabled={(date) => date < new Date() || date < new Date('1900-01-01')}
                               initialFocus
+                              className="rounded-md border"
                             />
                           </PopoverContent>
                         </Popover>
@@ -176,7 +181,8 @@ export default function BookDemoPage() {
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
+
+                  <Button type="submit" className="w-full text-lg h-12" disabled={form.formState.isSubmitting}>
                     {form.formState.isSubmitting ? 'Booking...' : 'Book Demo Session'}
                   </Button>
                 </form>
