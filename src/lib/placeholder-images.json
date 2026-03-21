@@ -64,18 +64,18 @@
       "mediaType": "image"
     },
     {
+      "id": "gallery-i3",
+      "description": "New Academy Highlight",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774080954/WhatsApp_Image_2026-03-21_at_1.44.56_PM_fwzjca.jpg",
+      "imageHint": "music highlight",
+      "mediaType": "image"
+    },
+    {
       "id": "gallery-v2",
       "description": "Technical Mastery in Motion",
       "imageUrl": "https://res.cloudinary.com/dlndf5tb6/video/upload/v1774078489/WhatsApp_Video_2026-03-20_at_9.49.39_PM_jr9xvz.mp4",
       "imageHint": "instrument play",
       "mediaType": "video"
-    },
-    {
-      "id": "gallery-i3",
-      "description": "A Passion for Excellence",
-      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078254/WhatsApp_Image_2026-03-15_at_2.11.24_PM_vailtl.jpg",
-      "imageHint": "music passion",
-      "mediaType": "image"
     },
     {
       "id": "gallery-i4",
@@ -194,6 +194,13 @@
       "description": "Our Musical Community",
       "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078247/WhatsApp_Image_2026-03-20_at_9.49.21_PM_3_scmx6o.jpg",
       "imageHint": "music community",
+      "mediaType": "image"
+    },
+    {
+      "id": "gallery-i18",
+      "description": "A Passion for Excellence",
+      "imageUrl": "https://res.cloudinary.com/dlndf5tb6/image/upload/v1774078254/WhatsApp_Image_2026-03-15_at_2.11.24_PM_vailtl.jpg",
+      "imageHint": "music passion",
       "mediaType": "image"
     }
   ]
