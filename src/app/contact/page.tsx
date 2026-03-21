@@ -56,7 +56,6 @@ export default function ContactPage() {
 
     const collectionRef = collection(db, 'contactMessages');
 
-    // 1. Save to Firestore (Mutation - Non-blocking)
     addDoc(collectionRef, docData)
       .catch(async (error) => {
         const permissionError = new FirestorePermissionError({
@@ -67,20 +66,19 @@ export default function ContactPage() {
         errorEmitter.emit('permission-error', permissionError);
       });
 
-    // 2. Send via EmailJS
     try {
       const result = await emailjs.send(
-        'service_757bimb', // Service ID
-        'template_mf6f3z5', // Template ID
+        'service_757bimb',
+        'template_mf6f3z5',
         {
-          name: data.name,      // Added common key
-          email: data.email,    // Added common key
+          name: data.name,
+          email: data.email,
           from_name: data.name,
           from_email: data.email,
           message: data.message,
           to_email: 'thechromatica@gmail.com',
         },
-        '8qvpeVNd3ZNTqn3Kl' // Public Key
+        '8qvpeVNd3ZNTqn3Kl'
       );
 
       if (result.status === 200) {
@@ -90,12 +88,9 @@ export default function ContactPage() {
         });
         form.reset();
       } else {
-        throw new Error(`EmailJS returned status ${result.status}: ${result.text}`);
+        throw new Error(`EmailJS returned status ${result.status}`);
       }
     } catch (error: any) {
-      const errorMsg = error?.text || error?.message || (typeof error === 'string' ? error : 'Unknown error');
-      console.error('EmailJS Error Details:', errorMsg);
-      
       toast({
         variant: 'destructive',
         title: 'Email Notification Failed',
@@ -106,8 +101,8 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="">
-      <div className="container mx-auto px-4 py-16 sm:py-24">
+    <div className="py-16 sm:py-24">
+      <div className="container">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl font-headline">
             Get In Touch

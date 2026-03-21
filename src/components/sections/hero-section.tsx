@@ -21,7 +21,7 @@ export default function HeroSection() {
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       <div className="relative z-10 flex h-full items-end justify-center text-center text-white">
-        <div className="container px-4 pb-16">
+        <div className="container pb-16">
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl font-headline">
             <span className="block">Unleash Your</span>
             <span className="block text-white/90">Musical Potential</span>

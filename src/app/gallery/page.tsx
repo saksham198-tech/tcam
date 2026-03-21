@@ -1,4 +1,3 @@
-
 'use client';
 
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -21,10 +20,10 @@ export default function GalleryPage() {
 
   return (
     <div className="bg-background min-h-screen pb-24">
-      {/* Hero Header */}
+      {/* Hero Header - Full width background, contained content */}
       <div className="relative overflow-hidden bg-primary/5 py-24 sm:py-32">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.primary.100),theme(colors.background))]" />
-        <div className="container mx-auto px-4 text-center">
+        <div className="container text-center">
           <Badge variant="outline" className="mb-6 px-4 py-1 text-primary border-primary/20 bg-primary/10 backdrop-blur-sm uppercase tracking-[0.2em] text-[10px] font-bold">
             <Sparkles className="h-3 w-3 mr-2" />
             Visual Archive
@@ -39,13 +38,12 @@ export default function GalleryPage() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 -mt-12">
+      <div className="container -mt-12">
         {galleryMedia.length > 0 ? (
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-rows-[300px]">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-rows-[300px]">
             {galleryMedia.map((item, idx) => {
-              // Bento grid logic: every 7th item is large, but ensure it's not one of the last few items
-              // to prevent alignment issues at the end of the grid.
-              const isLarge = idx % 7 === 0 && idx < galleryMedia.length - 3;
+              // Bento grid logic: ensure last items are standard size for perfect alignment
+              const isLarge = idx % 7 === 0 && idx < galleryMedia.length - 2;
               
               return (
                 <Dialog key={`${item.id}-${idx}`}>
