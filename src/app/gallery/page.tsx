@@ -1,3 +1,4 @@
+'use client';
 
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -9,15 +10,9 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 
-export const metadata = {
-  title: 'Gallery | The Chromatica Academy of Music',
-  description:
-    'Explore the vibrant life at The Chromatica Academy of Music. See our students, faculty, and state-of-the-art facilities in action.',
-};
-
 export default function GalleryPage() {
-  const galleryImages = PlaceHolderImages.filter((img) =>
-    img.id.startsWith('gallery-')
+  const galleryImages = PlaceHolderImages.filter((image) =>
+    image.id.startsWith('gallery-')
   );
 
   return (
