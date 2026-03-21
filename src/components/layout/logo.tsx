@@ -1,3 +1,4 @@
+
 import { cn } from '@/lib/utils';
 
 export function Logo({ className }: { className?: string }) {
@@ -9,20 +10,19 @@ export function Logo({ className }: { className?: string }) {
         xmlns="http://www.w3.org/2000/svg"
         className="h-full w-full transition-transform duration-300 hover:scale-105"
       >
-        {/* Subtle background highlight for the text area - trimmed to text width */}
-        <rect x="5" y="2" width="70" height="36" rx="4" className="fill-primary/5" />
+        {/* Subtle background highlight - trimmed to match text width (~50 units centered at 40) */}
+        <rect x="15" y="2" width="50" height="36" rx="4" className="fill-primary/5" />
         
-        {/* Top Bold Line - Trimmed to text width, moved higher to increase gap */}
+        {/* Top Bold Line - trimmed to match text width */}
         <path
-          d="M5 2H75"
+          d="M15 2H65"
           stroke="currentColor"
           strokeWidth="3"
           strokeLinecap="round"
           className="text-primary"
         />
-    
         
-        {/* TCAM Text - Centered at 20 for perfect vertical symmetry */}
+        {/* TCAM Text - perfectly centered between lines */}
         <text
           x="40"
           y="22"
@@ -37,18 +37,18 @@ export function Logo({ className }: { className?: string }) {
           TCAM
         </text>
         
-        {/* Bottom Bold Line - Trimmed to text width, moved lower to increase gap */}
+        {/* Bottom Bold Line - trimmed to match text width */}
         <path
-          d="M5 38H75"
+          d="M15 38H65"
           stroke="currentColor"
           strokeWidth="3"
           strokeLinecap="round"
           className="text-primary"
         />
         
-        {/* Small accents - positioned near the text */}
-        <circle cx="2" cy="20" r="1.5" className="fill-accent" />
-        <circle cx="78" cy="20" r="1.5" className="fill-accent" />
+        {/* Small accents - positioned near the text boundaries */}
+        <circle cx="12" cy="20" r="1.5" className="fill-accent" />
+        <circle cx="68" cy="20" r="1.5" className="fill-accent" />
       </svg>
     </div>
   );
