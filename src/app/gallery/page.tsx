@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -10,7 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
-import { Play, ZoomIn, Music2 } from 'lucide-react';
+import { Play, ZoomIn } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 export default function GalleryPage() {
@@ -33,15 +32,7 @@ export default function GalleryPage() {
           </p>
         </div>
 
-        {galleryMedia.length === 0 ? (
-          <div className="text-center py-24 border-2 border-dashed rounded-3xl bg-muted/30 flex flex-col items-center justify-center">
-            <Music2 className="h-12 w-12 text-muted-foreground mb-4 opacity-20" />
-            <p className="text-muted-foreground font-medium text-lg tracking-tight">Your musical journey starts here.</p>
-            <p className="text-sm text-muted-foreground mt-2 max-w-xs">
-              Note: Place your media files in <code>public/assets/</code> and name them <code>photo1.jpg</code>, <code>video1.mp4</code>, etc.
-            </p>
-          </div>
-        ) : (
+        {galleryMedia.length > 0 && (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {galleryMedia.map((item) => (
               <Dialog key={item.id}>
