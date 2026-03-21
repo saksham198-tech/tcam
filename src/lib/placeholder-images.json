@@ -41,34 +41,6 @@
       "imageUrl": "https://images.unsplash.com/photo-1730317195705-8a265a59ed1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjaXR5JTIwbWFwfGVufDB8fHx8MTc3MDgxNDA5NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "city map",
       "mediaType": "image"
-    },
-    {
-      "id": "gallery-1",
-      "description": "Intensive Piano Session",
-      "imageUrl": "https://picsum.photos/seed/music1/800/1000",
-      "imageHint": "piano session",
-      "mediaType": "image"
-    },
-    {
-      "id": "gallery-2",
-      "description": "Guitar Masterclass",
-      "imageUrl": "https://picsum.photos/seed/music2/800/1000",
-      "imageHint": "guitar class",
-      "mediaType": "image"
-    },
-    {
-      "id": "gallery-3",
-      "description": "Vocal Practice",
-      "imageUrl": "https://picsum.photos/seed/music3/800/1000",
-      "imageHint": "singing lesson",
-      "mediaType": "image"
-    },
-    {
-      "id": "gallery-4",
-      "description": "Drum Workshop",
-      "imageUrl": "https://picsum.photos/seed/music4/800/1000",
-      "imageHint": "drumming practice",
-      "mediaType": "image"
     }
   ]
 }
