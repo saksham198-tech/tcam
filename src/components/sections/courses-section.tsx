@@ -5,7 +5,7 @@ import { courses } from '@/lib/content';
 import { ArrowRight, Music } from 'lucide-react';
 
 export default function CoursesSection() {
-  const featuredCourses = courses.slice(0, 3);
+  const featuredCourses = courses.slice(0, 4);
 
   return (
     <section id="courses" className="py-16 sm:py-24">
@@ -18,7 +18,7 @@ export default function CoursesSection() {
             Start your journey with our most popular courses, designed for all skill levels.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {featuredCourses.map((course) => (
             <Card key={course.id} className="flex flex-col overflow-hidden rounded-lg shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
               <CardHeader>
