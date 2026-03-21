@@ -1,4 +1,3 @@
-
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -32,7 +31,6 @@ export default function EnrollPage() {
   });
 
   async function onSubmit(data: RegistrationFormValues) {
-    // 1. Simulate server-side registration (logging/DB)
     const result = await registerStudent(data);
     
     if (!result.success) {
@@ -44,24 +42,23 @@ export default function EnrollPage() {
       return;
     }
 
-    // 2. Send email notification via EmailJS
     try {
       const emailResult = await emailjs.send(
-        'service_757bimb', // Service ID
-        'template_56q2mds', // Enrollment Template ID
+        'service_757bimb',
+        'template_56q2mds',
         {
           fullName: data.fullName,
-          name: data.fullName,           // Alias for common template patterns
-          from_name: data.fullName,      // Alias for common template patterns
+          name: data.fullName,
+          from_name: data.fullName,
           email: data.email,
           phone: data.phone,
           course: data.course,
           batchTime: data.batchTime,
-          batch_time: data.batchTime,     // Alias for common template patterns
-          preferred_batch: data.batchTime, // Alias for common template patterns
+          batch_time: data.batchTime,
+          preferred_batch: data.batchTime,
           to_email: 'thechromatica@gmail.com',
         },
-        '8qvpeVNd3ZNTqn3Kl' // Public Key
+        '8qvpeVNd3ZNTqn3Kl'
       );
 
       if (emailResult.status === 200) {
@@ -80,14 +77,13 @@ export default function EnrollPage() {
         title: 'Email Notification Delayed',
         description: 'Your registration was recorded, but we had trouble sending the confirmation email. We will contact you soon!',
       });
-      // We still reset because the "server" part (registerStudent) succeeded
       form.reset();
     }
   }
 
   return (
-    <div className="">
-      <div className="container mx-auto px-4 py-16 sm:py-24">
+    <div className="py-16 sm:py-24">
+      <div className="container">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl font-headline">
@@ -184,10 +180,9 @@ export default function EnrollPage() {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="Weekdays Morning (9am-12pm)">Weekdays Morning (9am - 12pm)</SelectItem>
-                            <SelectItem value="Weekdays Afternoon (2pm-5pm)">Weekdays Afternoon (2pm - 5pm)</SelectItem>
-                            <SelectItem value="Weekends Morning (10am-1pm)">Weekends Morning (10am - 1pm)</SelectItem>
-                            <SelectItem value="Weekends Afternoon (3pm-6pm)">Weekends Afternoon (3pm - 6pm)</SelectItem>
+                            <SelectItem value="Weekdays Morning">Weekdays Morning</SelectItem>
+                            <SelectItem value="Weekdays Evening">Weekdays Evening</SelectItem>
+                            <SelectItem value="Weekends">Weekends</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
