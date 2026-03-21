@@ -10,12 +10,12 @@ export function Logo({ className }: { className?: string }) {
         xmlns="http://www.w3.org/2000/svg"
         className="h-full w-full transition-transform duration-300 hover:scale-105"
       >
-        {/* Subtle background highlight - trimmed to match text width (~50 units centered at 40) */}
-        <rect x="15" y="2" width="50" height="36" rx="4" className="fill-primary/5" />
+        {/* Subtle background highlight - full width */}
+        <rect x="0" y="2" width="80" height="36" rx="4" className="fill-primary/5" />
         
-        {/* Top Bold Line - trimmed to match text width */}
+        {/* Top Bold Line - full width */}
         <path
-          d="M15 2H65"
+          d="M0 2H80"
           stroke="currentColor"
           strokeWidth="3"
           strokeLinecap="round"
@@ -37,16 +37,16 @@ export function Logo({ className }: { className?: string }) {
           TCAM
         </text>
         
-        {/* Bottom Bold Line - trimmed to match text width */}
+        {/* Bottom Bold Line - full width */}
         <path
-          d="M15 38H65"
+          d="M0 38H80"
           stroke="currentColor"
           strokeWidth="3"
           strokeLinecap="round"
           className="text-primary"
         />
         
-        {/* Small accents - positioned near the text boundaries */}
+        {/* Small accents */}
         <circle cx="12" cy="20" r="1.5" className="fill-accent" />
         <circle cx="68" cy="20" r="1.5" className="fill-accent" />
       </svg>
