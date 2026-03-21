@@ -17,6 +17,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { cn } from '@/lib/utils';
 import { CalendarIcon } from 'lucide-react';
 import { Calendar } from '@/components/ui/calendar';
+import emailjs from '@emailjs/browser';
 
 type DemoBookingFormValues = z.infer<typeof demoBookingFormSchema>;
 
@@ -38,18 +39,53 @@ export default function BookDemoPage() {
 
   async function onSubmit(data: DemoBookingFormValues) {
     const result = await bookDemoSession(data);
-    if (result.success) {
-      toast({
-        title: 'Demo Session Booked!',
-        description: "We've scheduled your free demo. You'll receive a confirmation email shortly.",
-      });
-      form.reset();
-    } else {
+    
+    if (!result.success) {
       toast({
         variant: 'destructive',
         title: 'Uh oh! Something went wrong.',
         description: result.message,
       });
+      return;
+    }
+
+    try {
+      // Send Email Notification via EmailJS
+      const emailResult = await emailjs.send(
+        'service_757bimb',
+        'template_56q2mds',
+        {
+          fullName: data.name,
+          name: data.name,
+          from_name: data.name,
+          email: data.email,
+          phone: data.phone,
+          course: data.instrument, // Maps to the "Course" placeholder in the template
+          batchTime: format(data.preferredDate, 'PPP'), // Maps to the "Batch Time" placeholder
+          batch_time: format(data.preferredDate, 'PPP'),
+          preferred_batch: format(data.preferredDate, 'PPP'),
+          to_email: 'thechromatica@gmail.com',
+        },
+        '8qvpeVNd3ZNTqn3Kl'
+      );
+
+      if (emailResult.status === 200) {
+        toast({
+          title: 'Demo Session Booked!',
+          description: "We've scheduled your free demo. A confirmation email has been sent.",
+        });
+        form.reset();
+      } else {
+        throw new Error('Email delivery failed');
+      }
+    } catch (error: any) {
+      console.error('EmailJS Error:', error);
+      toast({
+        variant: 'destructive',
+        title: 'Notification Delayed',
+        description: 'Your booking was recorded, but we had trouble sending the notification email. We will contact you soon!',
+      });
+      form.reset();
     }
   }
 
