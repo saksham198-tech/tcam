@@ -49,6 +49,23 @@ export const courses = [
   },
 ];
 
+export const founders = [
+  {
+    id: 1,
+    name: 'Rohan Rana',
+    role: 'Founder & Creative Director',
+    image: 'https://res.cloudinary.com/dlndf5tb6/image/upload/v1774717227/Rohan_bhaiya_wpmt4g.jpg',
+    description: 'A highly experienced music professional with 15+ years in the industry, having collaborated with prominent radio stations and theatre organisations. Brings extensive domain expertise, creative leadership, and a deep understanding of performance arts to the founding team.',
+  },
+  {
+    id: 2,
+    name: 'Hitendra Rana',
+    role: 'Founder & Technical Visionary',
+    image: 'https://res.cloudinary.com/dlndf5tb6/image/upload/v1774717191/Hitendra_bhaiya_fxizj7.jpg',
+    description: 'A seasoned music professional with over 15 years of experience, bringing a rich background of collaboration with leading radio stations and diverse theatre organisations. Combines artistic depth with practical industry insight, contributing a strong creative vision to the founding team.',
+  },
+];
+
 export const faculty = [
   {
     id: 1,
