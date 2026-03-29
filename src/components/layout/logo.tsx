@@ -1,4 +1,3 @@
-
 import { cn } from '@/lib/utils';
 
 export function Logo({ className }: { className?: string }) {
@@ -45,10 +44,6 @@ export function Logo({ className }: { className?: string }) {
           strokeLinecap="round"
           className="text-primary"
         />
-        
-        {/* Small accents */}
-        <circle cx="12" cy="20" r="1.5" className="fill-accent" />
-        <circle cx="68" cy="20" r="1.5" className="fill-accent" />
       </svg>
     </div>
   );
