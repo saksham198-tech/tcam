@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Heart, ShieldCheck, Zap, Users, Sparkles, Star } from 'lucide-react';
+import { Heart, ShieldCheck, Zap, Users, Sparkles, Star, Award } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import { founders } from '@/lib/content';
@@ -35,7 +35,7 @@ export default function AboutPage() {
             Our Legacy
           </Badge>
           <h1 className="text-5xl font-extrabold tracking-tight text-foreground sm:text-7xl font-headline mb-6">
-            Nurturing the <br />
+            <span className="block">Nurturing the</span>
             <span className="text-primary">Soul of Music</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-medium">
