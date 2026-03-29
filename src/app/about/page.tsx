@@ -33,7 +33,7 @@ export default function AboutPage() {
             <span className="text-primary">Soul of Music</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-medium">
-            Since 2018, The Chromatica Academy of Music (TCAM) has been a sanctuary where technical mastery meets creative freedom.
+            Since 2020, The Chromatica Academy of Music (TCAM) has been a sanctuary where technical mastery meets creative freedom.
           </p>
         </div>
       </section>
@@ -49,7 +49,7 @@ export default function AboutPage() {
                   At TCAM, we don't just teach notes; we teach students how to find their own unique voice in a world of sound. Our curriculum is meticulously balanced between rigorous technical training and the boundless joy of artistic exploration. 
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Founded in 2018 by industry veterans Rohan and Hitendra Rana, the academy was born out of a desire to provide a holistic musical education. With over 15 years of experience in radio and theatre, our founders brought a unique perspective to Lucknow's music scene—one that prioritizes stage presence and emotional connection as much as technical skill.
+                  Founded in 2020 by industry veterans Rohan and Hitendra Rana, the academy was born out of a desire to provide a holistic musical education. With over 15 years of experience in radio and theatre, our founders brought a unique perspective to Lucknow's music scene—one that prioritizes stage presence and emotional connection as much as technical skill.
                 </p>
               </div>
               

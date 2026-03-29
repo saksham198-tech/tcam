@@ -132,7 +132,7 @@ export default function GalleryPage() {
                       <div className="flex flex-col gap-1">
                         <p className="text-xs font-bold uppercase tracking-widest text-primary">Chromatica Academy</p>
                         <h3 className="text-2xl font-bold font-headline leading-tight">{item.description}</h3>
-                        <p className="text-sm opacity-60">Nurturing Excellence Since 2018</p>
+                        <p className="text-sm opacity-60">Nurturing Excellence Since 2020</p>
                       </div>
                     </div>
                   </DialogContent>
