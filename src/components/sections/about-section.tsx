@@ -19,7 +19,7 @@ export default function AboutSection() {
                 Our Story
               </Badge>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground font-headline leading-[1.1]">
-                Nurturing the <span className="text-primary">Soul of Music</span> Since 2018
+                Nurturing the <span className="text-primary">Soul of Music</span> Since 2020
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 The Chromatica Academy of Music (TCAM) is more than just a school; it's a sanctuary where technical mastery meets creative freedom. We believe music is a universal language that transforms lives.

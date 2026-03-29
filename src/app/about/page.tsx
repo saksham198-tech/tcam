@@ -9,24 +9,18 @@ import { founders } from '@/lib/content';
 
 export default function AboutPage() {
   const galleryImages = PlaceHolderImages.filter(img => img.id.startsWith('gallery-i')).slice(0, 4);
-  const heroVideo = PlaceHolderImages.find(img => img.id === 'gallery-v1');
 
   return (
     <div className="bg-background min-h-screen">
-      {/* Hero Section with Video Background */}
+      {/* Hero Section with Image Background */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        {heroVideo ? (
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover opacity-40 scale-105"
-            src={heroVideo.imageUrl}
-          />
-        ) : (
-          <div className="absolute inset-0 bg-primary/20" />
-        )}
+        <Image
+          src="https://res.cloudinary.com/dlndf5tb6/image/upload/v1774771548/about_us_guitar_image_plht6c.jpg"
+          alt="About TCAM - Musical Inspiration"
+          fill
+          className="object-cover opacity-40 scale-105"
+          priority
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-transparent to-background" />
         
         <div className="container relative z-10 text-center">
