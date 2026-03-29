@@ -2,31 +2,43 @@
 
 This is a Next.js 15 application integrated with Firebase and Genkit.
 
-## Deployment Guide
+## 🚀 Final Deployment Steps (After GitHub Push)
 
-### Step 1: Push to GitHub
-1. Create a new repository on GitHub.
-2. Push your current code to that repository.
+Since your code is already on GitHub, follow these three parts to go live on your `crazydomains.in` domain.
 
-### Step 2: Set up Firebase App Hosting
-1. Go to the [Firebase Console](https://console.firebase.google.com/).
-2. Select your project `tcam-music`.
-3. In the left sidebar, navigate to **Build > App Hosting**.
-4. Click **Get Started** and connect your GitHub repository.
-5. Follow the wizard to set up the build settings (it will automatically detect Next.js).
-6. Once the build completes, Firebase will provide a `.web.app` or `.firebaseapp.com` URL.
+### Part 1: Connect GitHub to Firebase
+1. Open the [Firebase Console](https://console.firebase.google.com/).
+2. Select your project: **tcam-music**.
+3. In the left sidebar, go to **Build > App Hosting**.
+4. Click **Get Started**.
+5. **Connect to GitHub**: Follow the prompts to authorize Firebase to see your repositories.
+6. **Select Repository**: Choose your `tcam-music` (or similarly named) repository.
+7. **Deployment Settings**: 
+   - Root directory: `/`
+   - Live branch: `main` (or `master`)
+8. Click **Finish and Deploy**. Firebase will now start building your Next.js app. This usually takes 3-5 minutes.
 
-### Step 3: Connect Crazy Domains (Domain Setup)
-1. In the Firebase App Hosting dashboard, go to the **Settings** or **Custom Domains** tab.
-2. Click **Add Custom Domain** and enter your domain purchased from `crazydomains.in`.
-3. Firebase will provide you with **DNS Records** (usually `A` records or a `CNAME`).
-4. Log in to your **Crazy Domains Control Panel**.
-5. Find your domain and look for **DNS Settings** or **Zone Manager**.
-6. Add the records provided by Firebase:
-   - **Type:** A
-   - **Host:** @ (or leave blank)
-   - **Points to:** [IP address provided by Firebase]
-7. Save the changes. Note that DNS propagation can take anywhere from 1 to 24 hours.
+### Part 2: Add your Crazy Domains URL
+Once the deployment status shows "Success":
+1. In the App Hosting dashboard, click on the **Settings** tab.
+2. Under **Custom Domains**, click **Add Domain**.
+3. Enter your domain (e.g., `yourdomain.in` or `www.yourdomain.in`).
+4. Firebase will provide you with **DNS Records** (usually 1 or 2 IP addresses for "A" records).
+
+### Part 3: Configure Crazy Domains DNS
+1. Log in to your [Crazy Domains Account](https://www.crazydomains.in/).
+2. Go to **Domains** > **Manage** (next to your domain).
+3. Look for **DNS Settings** or **Zone Manager**.
+4. **Add/Edit A Records**:
+   - **Host/Subdomain**: `@`
+   - **Type**: `A`
+   - **Value/Points to**: [The IP address provided by Firebase]
+   - **TTL**: 3600 (or default)
+5. (Optional) Add a CNAME for `www`:
+   - **Host**: `www`
+   - **Type**: `CNAME`
+   - **Value**: `[yourproject].web.app` (or as provided by Firebase)
+6. **Save Changes**. Note: It can take a few hours for the domain to start working globally.
 
 ## Local Development
 
