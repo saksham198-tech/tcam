@@ -15,9 +15,14 @@ const FloatingInstruments = () => {
   const [instruments, setInstruments] = useState<Instrument[]>([]);
 
   useEffect(() => {
-    const generatedInstruments = Array.from({ length: 15 }).map((_, i) => {
+    // Check if on mobile to reduce clutter
+    const isMobile = window.innerWidth < 768;
+    const count = isMobile ? 8 : 15;
+
+    const generatedInstruments = Array.from({ length: count }).map((_, i) => {
       const Icon = instrumentIcons[i % instrumentIcons.length];
-      const size = Math.random() * 4 + 2; // 2rem to 6rem
+      const sizeBase = isMobile ? 1.5 : 2;
+      const size = Math.random() * 3 + sizeBase; // 1.5-4.5rem on mobile, 2-5rem on desktop
       const top = Math.random() * 100;
       const left = Math.random() * 100;
       const animationDuration = Math.random() * 20 + 15; // 15s to 35s
@@ -44,12 +49,12 @@ const FloatingInstruments = () => {
   }
 
   return (
-    <div className="fixed inset-0 -z-10 h-full w-full overflow-hidden">
+    <div className="fixed inset-0 -z-10 h-full w-full overflow-hidden pointer-events-none">
       <div className="relative h-full w-full">
         {instruments.map(({ id, Icon, style }) => (
           <div
             key={id}
-            className="instrument-bubble absolute text-primary/5"
+            className="instrument-bubble absolute text-primary/5 select-none"
             style={style}
           >
             <Icon className="h-full w-full" />
