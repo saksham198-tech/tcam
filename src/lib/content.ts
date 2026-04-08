@@ -54,7 +54,7 @@ export const founders = [
     id: 1,
     name: 'Hitendra Rana',
     role: 'Founder & Technical Visionary',
-    image: 'https://res.cloudinary.com/dlndf5tb6/image/upload/v1774718016/hitendra_bhaiya_o5yrzb.jpg',
+    image: 'https://res.cloudinary.com/dlndf5tb6/image/upload/q_auto/f_auto/v1775667632/profile_hitendra_fklh2u.jpg',
     description: 'A seasoned music professional with over 15 years of experience, bringing a rich background of collaboration with leading radio stations and diverse theatre organisations. Combines artistic depth with practical industry insight, contributing a strong creative vision to the founding team.',
   },
   {
