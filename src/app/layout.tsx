@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'TCAM - The Chromatica Academy of Music',
   description: 'The Chromatica Academy of Music - Nurturing musical talent from beginner to advanced levels.',
   icons: {
-    icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40"><rect x="0" y="2" width="80" height="36" rx="4" fill="%23483D8B" fill-opacity="0.1"/><path d="M0 2H80" stroke="%23483D8B" stroke-width="6" stroke-linecap="round"/><text x="40" y="24" text-anchor="middle" dominant-baseline="middle" fill="%23483D8B" font-family="sans-serif" font-weight="bold" font-size="24">TCAM</text><path d="M0 38H80" stroke="%23483D8B" stroke-width="6" stroke-linecap="round"/></svg>',
+    icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="%23483D8B" fill-opacity="0.1"/><path d="M2 6H30" stroke="%23483D8B" stroke-width="4" stroke-linecap="round"/><text x="16" y="17" text-anchor="middle" dominant-baseline="middle" fill="%23483D8B" font-family="sans-serif" font-weight="bold" font-size="9">TCAM</text><path d="M2 26H30" stroke="%23483D8B" stroke-width="4" stroke-linecap="round"/></svg>',
   },
 };
 
