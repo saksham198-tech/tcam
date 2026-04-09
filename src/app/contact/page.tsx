@@ -13,7 +13,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import Link from 'link';
+import Link from 'next/link';
 import emailjs from '@emailjs/browser';
 
 // Firebase imports
