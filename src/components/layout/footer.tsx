@@ -73,7 +73,7 @@ export default function Footer() {
             <address className="mt-4 space-y-2 not-italic text-muted-foreground">
               <p>562/114 ramgarh colony, kanpur road, lucknow 226012</p>
               <p>Email: <a href="mailto:thechromatica@gmail.com" className="hover:text-primary">thechromatica@gmail.com</a></p>
-              <p>Phone: <a href="tel:+918960132690" className="hover:text-primary">+91 89601 32690</a></p>
+              <p>Phone: <a href="tel:+918960132690" className="hover:text-primary">+91 89601 32690</a>, <a href="tel:+917668029303" className="hover:text-primary">+91 76680 29303</a></p>
             </address>
           </div>
         </div>

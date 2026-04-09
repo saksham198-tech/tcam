@@ -13,7 +13,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import Link from 'next/link';
+import Link from 'link';
 import emailjs from '@emailjs/browser';
 
 // Firebase imports
@@ -131,6 +131,7 @@ export default function ContactPage() {
                   <div>
                     <span className="font-semibold text-foreground">Phone</span>
                     <p>+91 89601 32690</p>
+                    <p>+91 76680 29303</p>
                   </div>
                 </div>
                 <div className="flex items-start">
