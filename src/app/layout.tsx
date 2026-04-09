@@ -10,9 +10,6 @@ import { FirebaseClientProvider } from '@/firebase';
 export const metadata: Metadata = {
   title: 'TCAM - The Chromatica Academy of Music',
   description: 'The Chromatica Academy of Music - Nurturing musical talent from beginner to advanced levels.',
-  icons: {
-    icon: '/favicon.ico',
-  },
 };
 
 export default function RootLayout({
