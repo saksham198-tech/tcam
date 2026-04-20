@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'TCAM - The Chromatica Academy of Music',
   description: 'The Chromatica Academy of Music - Nurturing musical talent from beginner to advanced levels.',
   icons: {
-    icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="4" fill="%23483D8B" fill-opacity="0.1"/><path d="M0 2H32" stroke="%23483D8B" stroke-width="5" stroke-linecap="butt"/><text x="16" y="17.5" text-anchor="middle" dominant-baseline="middle" fill="%23483D8B" font-family="Inter, sans-serif" font-weight="900" font-size="12">TCAM</text><path d="M0 30H32" stroke="%23483D8B" stroke-width="5" stroke-linecap="butt"/></svg>',
+    icon: 'https://res.cloudinary.com/dlndf5tb6/image/upload/q_auto/f_auto/v1775761414/Gemini_Generated_Image_wj3hnuwj3hnuwj3h-removebg-preview_kt3fme.png',
   },
 };
 

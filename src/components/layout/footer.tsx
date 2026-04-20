@@ -65,7 +65,6 @@ export default function Footer() {
             <ul className="mt-4 space-y-2">
               <li><Link href="/enroll" className="text-muted-foreground hover:text-primary">Enroll Now</Link></li>
               <li><Link href="/book-demo" className="text-muted-foreground hover:text-primary">Book a Demo</Link></li>
-              <li><Link href="#" className="text-muted-foreground hover:text-primary">FAQs</Link></li>
             </ul>
           </div>
           <div>
